@@ -1,14 +1,19 @@
-import {
-  storiesOf,
-  html,
-} from '@open-wc/storybook';
+import { storiesOf, html } from '@open-wc/storybook';
 
-import '../litelement-testing.js';
+import loadPolyfills from '@open-wc/polyfills-loader';
+
+loadPolyfills().then(() => import('../litelement-testing.js'));
 
 storiesOf('litelement-testing', module)
-  .add('default', () => html`
-    <litelement-testing>user content tag: litelement-testing</litelement-testing>
-  `)
-  .add('right', () => html`
-    <litelement-testing class="right">user content tag: litelement-testing</litelement-testing>
-  `);
+  .add(
+    'default',
+    () => html`
+      <litelement-testing>user content tag: litelement-testing</litelement-testing>
+    `,
+  )
+  .add(
+    'right',
+    () => html`
+      <litelement-testing class="right">user content tag: litelement-testing</litelement-testing>
+    `,
+  );

@@ -16,7 +16,7 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
     if (rule.exclude) {
       for (let j = 0; j < rule.exclude.length; j += 1) {
         if (rule.exclude[j] === path.resolve('node_modules')) {
-          console.log(rule.exclude)
+          console.log(rule.exclude);
           rule.exclude[j] = modulePath => {
             return (
               /node_modules/.test(modulePath) &&
@@ -30,6 +30,6 @@ module.exports = (storybookBaseConfig, configType, defaultConfig) => {
     }
   }
 
-
+  defaultConfig.module.rules[0].exclude = /node_modules\/(?!(lit-html|@polymer|lit-element)\/).*/;
   return defaultConfig;
 };
