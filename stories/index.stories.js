@@ -1,8 +1,5 @@
 import { storiesOf, html } from '@open-wc/storybook';
-
-import loadPolyfills from '@open-wc/polyfills-loader';
-
-loadPolyfills().then(() => import('../litelement-testing.js'));
+import '../litelement-testing.js';
 
 storiesOf('litelement-testing', module)
   .add(
