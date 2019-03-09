@@ -30,21 +30,26 @@
     "test:es5": "karma start karma.es5.config.js",
     "test:es5:watch": "karma start karma.es5.config.js --auto-watch=true --single-run=false",
     "test:es5:bs": "karma start karma.es5.bs.config.js",
+    "stryker": "stryker run",
     "site:build": "npm run storybook:build",
     "storybook:build": "build-storybook -o _site",
     "storybook:start": "start-storybook -p 9001"
   },
   "devDependencies": {
-    "husky": "^1.0.0",
-    "lint-staged": "^8.0.0",
-    "@open-wc/eslint-config": "^0.3.0",
-    "@open-wc/prettier-config": "^0.1.0",
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.0",
+    "@open-wc/eslint-config": "^0.3.0",
+    "@open-wc/prettier-config": "^0.1.0",
+    "@open-wc/storybook": "^0.2.0",
     "@open-wc/testing": "^0.9.0",
     "@open-wc/testing-karma": "^0.4.0",
-    "webpack-merge": "^4.1.5",
     "@open-wc/testing-karma-bs": "^0.2.0",
-    "@open-wc/storybook": "^0.2.0"
+    "@stryker-mutator/core": "^1.0.2",
+    "@stryker-mutator/javascript-mutator": "^1.0.2",
+    "@stryker-mutator/karma-runner": "^1.0.2",
+    "husky": "^1.0.0",
+    "karma-iframes": "^1.2.2",
+    "lint-staged": "^8.0.0",
+    "webpack-merge": "^4.1.5"
   }
 }

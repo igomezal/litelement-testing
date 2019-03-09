@@ -1,5 +1,5 @@
 import { storiesOf, html } from '@open-wc/storybook';
-import '../litelement-testing.js';
+import '../src/LitElementTesting/litelement-testing.js';
 
 storiesOf('litelement-testing', module)
   .add(
